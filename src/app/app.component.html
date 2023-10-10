@@ -1,1 +1,28 @@
+
+
 <a href="https://learnenglish.britishcouncil.org/">Aprender</a>
+
+<div class="container">
+
+  Transform the following active sentences into passive
+  <div *ngFor="let item of list">
+    <span class="d-block">{{item.sentences}}</span>
+    <div class="d-flex flex-wrap align-items-center">
+      <div class="">
+        <textarea cols="50" class="form-control" disabled>{{item.sentences}}</textarea>
+      </div>
+      <div class="">
+        <span>-></span>
+      </div>
+      <div class="">
+        <textarea cols="50" class="form-control"></textarea>
+      </div>
+      <div class="">
+        <button (click)="item.showCorrect = true" class="btn btn-primary mx-2 btn-sm">Show correct answer</button>
+      </div>
+      <div style="width: 290px;" class="">
+        <span *ngIf="item.showCorrect">{{item.correct}}</span>
+      </div>
+    </div>
+  </div>
+</div>
