@@ -21,7 +21,7 @@
         <button (click)="item.showCorrect = true" class="btn btn-primary mx-2 btn-sm">Show correct answer</button>
       </div>
       <div style="width: 290px;" class="">
-        <span *ngIf="item.showCorrect">{{item.correct}}</span>
+        <span *ngIf="item.showCorrect" class="text-success">{{item.correct}}</span>
       </div>
     </div>
   </div>
